@@ -1,0 +1,31 @@
+---
+import CoursesItem from "./CoursesItem.astro";
+
+const COURSES = [
+    {
+        date: "Marzo 2023 - Junio 2023",
+        title: "Full Stack Developer",
+        from: "Cámara de Comercio, Madrid",
+        description:
+            "Formación en lenguajes de programación: HTML, CSS, JavaScript, MySql, PHP y Java.",
+        link: "https://cursos-formacion.camaramadrid.es/",
+    },
+    {
+        date: "Enero 2023 - Marzo 2023",
+        title: "Bootcamp",
+        from: "Ubiqum Academy",
+        description: 
+        "Formación en HTML y CSS.",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3.5">
+    {
+        COURSES.map((courses) => (
+            <li class="mb-10 ms-4">
+                <CoursesItem {...courses} />
+            </li>
+        ))
+    }
+</ol>
